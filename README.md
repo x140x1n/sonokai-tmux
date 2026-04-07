@@ -114,6 +114,33 @@ set -gF window-status-current-format "#[bg=#{@snk_purple},fg=#{@snk_crust}] ##I 
 This configuration shows some customisation options, that can be further
 extended as desired.
 
+### With TPM
+
+```bash
+# ~/.tmux.conf
+
+# Options to make tmux more pleasant
+set -g mouse on
+set -g default-terminal "tmux-256color"
+
+# Configure the sonokai plugin
+set -g @sonokai_flavor "default"
+set -g @sonokai_window_status_style "rounded"
+set -g @plugin 'x140x1n/sonokai-tmux'
+
+# Make the status line pretty and add some modules
+set -g status-right-length 100
+set -g status-left-length 100
+set -g status-left ""
+set -g status-right "#{E:@sonokai_status_application}"
+set -ag status-right "#{E:@sonokai_status_session}"
+
+# Run TPM (keep this at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+### With Manual Installation
+
 ```bash
 # ~/.tmux.conf
 
@@ -125,23 +152,15 @@ set -g default-terminal "tmux-256color"
 set -g @sonokai_flavor "default"
 set -g @sonokai_window_status_style "rounded"
 
-# Load sonokai
+# Load sonokai (manual installation)
 run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux
-# For TPM, instead use `run ~/.tmux/plugins/tmux/sonokai.tmux`
 
 # Make the status line pretty and add some modules
 set -g status-right-length 100
 set -g status-left-length 100
 set -g status-left ""
 set -g status-right "#{E:@sonokai_status_application}"
-set -agF status-right "#{E:@sonokai_status_cpu}"
 set -ag status-right "#{E:@sonokai_status_session}"
-set -ag status-right "#{E:@sonokai_status_uptime}"
-set -agF status-right "#{E:@sonokai_status_battery}"
-
-run ~/.config/tmux/plugins/tmux-plugins/tmux-cpu/cpu.tmux
-run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
-# Or, if using TPM, just run TPM
 ```
 
 ## Documentation
