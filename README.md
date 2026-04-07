@@ -1,48 +1,33 @@
 <!-- markdownlint-disable -->
 <h3 align="center">
- <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
- <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
- Catppuccin for <a href="https://github.com/tmux/tmux">Tmux</a>
- <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+ Sonokai for <a href="https://github.com/tmux/tmux">Tmux</a>
 </h3>
 
 <p align="center">
-    <a href="https://github.com/catppuccin/tmux/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/tmux?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/tmux/issues"><img src="https://img.shields.io/github/issues/catppuccin/tmux?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-    <a href="https://github.com/catppuccin/tmux/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/tmux?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+ High Contrast & Vivid Color Scheme based on Monokai Pro
 </p>
 
 <p align="center">
-  <img src="./assets/preview.webp"/>
+    <a href="https://github.com/x140x1n/sonokai-tmux/stargazers"><img src="https://img.shields.io/github/stars/x140x1n/sonokai-tmux?colorA=2c2e34&colorB=9ed072&style=for-the-badge"></a>
+    <a href="https://github.com/x140x1n/sonokai-tmux/issues"><img src="https://img.shields.io/github/issues/x140x1n/sonokai-tmux?colorA=2c2e34&colorB=f39660&style=for-the-badge"></a>
+    <a href="https://github.com/x140x1n/sonokai-tmux/contributors"><img src="https://img.shields.io/github/contributors/x140x1n/sonokai-tmux?colorA=2c2e34&colorB=76cce0&style=for-the-badge"></a>
+</p>
+
+<p align="center">
+  Based on <a href="https://github.com/sainnhe/sonokai">Sonokai</a> by sainnhe
 </p>
 <!-- markdownlint-enable -->
 
-## Themes
+## Variants
 
-<details>
-<summary>🌻 Latte</summary>
+Sonokai offers 6 beautiful variants:
 
-![Latte Flavor Preview](./assets/latte.webp)
-
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-
-![Frappe Flavor Preview](./assets/frappe.webp)
-
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-
-![Macchiato Flavor Preview](./assets/macchiato.webp)
-
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-
-![Mocha Flavor Preview](./assets/mocha.webp)
-
-</details>
+- **Default** - The original Sonokai style
+- **Shusia** - Based on Monokai Pro
+- **Andromeda** - Inspired by Andromeda theme with blue undertones
+- **Atlantis** - Cool cyan-focused variant
+- **Maia** - Teal/cyan accent variant
+- **Espresso** - Warm brown tones variant
 
 ## Installation
 
@@ -59,15 +44,15 @@ This method is recommended as TPM has some issues with name conflicts.
 <!-- x-release-please-start-version -->
 
 1. Clone this repository to your desired location (e.g.
-   `~/.config/tmux/plugins/catppuccin`).
+   `~/.config/tmux/plugins/sonokai`).
 
    ```bash
-   mkdir -p ~/.config/tmux/plugins/catppuccin
-   git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+   mkdir -p ~/.config/tmux/plugins/sonokai
+   git clone https://github.com/x140x1n/sonokai-tmux.git ~/.config/tmux/plugins/sonokai/tmux
    ```
 
 1. Add the following line to your `tmux.conf` file:
-   `run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux`.
+   `run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux`.
 1. Reload Tmux by either restarting or reloading with `tmux source ~/.tmux.conf`.
 <!-- x-release-please-end -->
 
@@ -78,65 +63,56 @@ Check out what to do next in the "[Getting Started Guide](./docs/tutorials/01-ge
 <!-- x-release-please-start-version -->
 
 1.  Install [TPM](https://github.com/tmux-plugins/tpm)
-1.  Add the Catppuccin plugin:
+1.  Add the Sonokai plugin:
 
     ```bash
-    set -g @plugin 'catppuccin/tmux#v2.1.3' # See https://github.com/catppuccin/tmux/tags for additional tags
+    set -g @plugin 'x140x1n/sonokai-tmux'
     # ...alongside
     set -g @plugin 'tmux-plugins/tpm'
     ```
 
-1.  (Optional) Set your preferred flavor, it defaults to `"mocha"`:
+1.  (Optional) Set your preferred variant, it defaults to `"default"`:
 
     ```bash
-    set -g @catppuccin_flavor 'mocha' # latte, frappe, macchiato or mocha
+    set -g @sonokai_flavor 'default' # default, shusia, andromeda, atlantis, maia or espresso
     ```
 
     <!-- x-release-please-end -->
 
 > [!IMPORTANT]
 > You may have to run `~/.config/tmux/plugins/tpm/bin/clean_plugins`
-> if upgrading from an earlier version
-> (especially from `v0.3.0`).
+> if upgrading from an earlier version.
 
 ### For TMUX versions prior to 3.2
 
 This plugin uses features that were only introduced into tmux in version 3.2.
 If you are using a version earlier than this, you can still have lovely
-catppuccin colors, the installation method just looks a little different.
+sonokai colors, the installation method just looks a little different.
 
 ```sh
 # In your ~/.tmux.conf
 
-# Add the colors from the pallete. Check the themes/ directory for all options.
+# Add the colors from the palette. Check the themes/ directory for all options.
 
-# Some basic mocha colors.
-set -g @ctp_bg "#24273a"
-set -g @ctp_surface_1 "#494d64"
-set -g @ctp_fg "#cad3f5"
-set -g @ctp_mauve "#c6a0f6"
-set -g @ctp_crust "#181926"
+# Some basic sonokai default colors.
+set -g @snk_bg "#2c2e34"
+set -g @snk_surface_1 "#363944"
+set -g @snk_fg "#e2e2e3"
+set -g @snk_purple "#b39df3"
+set -g @snk_crust "#181819"
 
 # status line
-set -gF status-style "bg=#{@ctp_bg},fg=#{@ctp_fg}"
+set -gF status-style "bg=#{@snk_bg},fg=#{@snk_fg}"
 
 # windows
-set -gF window-status-format "#[bg=#{@ctp_surface_1},fg=#{@ctp_fg}] ##I ##T "
-set -gF window-status-current-format "#[bg=#{@ctp_mauve},fg=#{@ctp_crust}] ##I ##T "
+set -gF window-status-format "#[bg=#{@snk_surface_1},fg=#{@snk_fg}] ##I ##T "
+set -gF window-status-current-format "#[bg=#{@snk_purple},fg=#{@snk_crust}] ##I ##T "
 ```
-
-### Upgrading from v0.3
-
-Breaking changes have been introduced since 0.3, to understand how to migrate
-your configuration, see pinned issue [#487](https://github.com/catppuccin/tmux/issues/487).
 
 ## Recommended Default Configuration
 
 This configuration shows some customisation options, that can be further
 extended as desired.
-This is what is used for the previews above.
-
-![Example configuration](./assets/mocha.webp)
 
 ```bash
 # ~/.tmux.conf
@@ -145,23 +121,23 @@ This is what is used for the previews above.
 set -g mouse on
 set -g default-terminal "tmux-256color"
 
-# Configure the catppuccin plugin
-set -g @catppuccin_flavor "mocha"
-set -g @catppuccin_window_status_style "rounded"
+# Configure the sonokai plugin
+set -g @sonokai_flavor "default"
+set -g @sonokai_window_status_style "rounded"
 
-# Load catppuccin
-run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
-# For TPM, instead use `run ~/.tmux/plugins/tmux/catppuccin.tmux`
+# Load sonokai
+run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux
+# For TPM, instead use `run ~/.tmux/plugins/tmux/sonokai.tmux`
 
 # Make the status line pretty and add some modules
 set -g status-right-length 100
 set -g status-left-length 100
 set -g status-left ""
-set -g status-right "#{E:@catppuccin_status_application}"
-set -agF status-right "#{E:@catppuccin_status_cpu}"
-set -ag status-right "#{E:@catppuccin_status_session}"
-set -ag status-right "#{E:@catppuccin_status_uptime}"
-set -agF status-right "#{E:@catppuccin_status_battery}"
+set -g status-right "#{E:@sonokai_status_application}"
+set -agF status-right "#{E:@sonokai_status_cpu}"
+set -ag status-right "#{E:@sonokai_status_session}"
+set -ag status-right "#{E:@sonokai_status_uptime}"
+set -agF status-right "#{E:@sonokai_status_battery}"
 
 run ~/.config/tmux/plugins/tmux-plugins/tmux-cpu/cpu.tmux
 run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
@@ -180,10 +156,11 @@ run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
 
 - [Status Line](./docs/reference/status-line.md)
 - [Configuration Options Reference](./docs/reference/configuration.md)
-- [Tmux Configuration Showcase](https://github.com/catppuccin/tmux/discussions/317)
 
 ## 💝 Thanks to
 
+- [sainnhe](https://github.com/sainnhe) - Creator of the Sonokai color scheme
+- [catppuccin/tmux](https://github.com/catppuccin/tmux) - Original tmux plugin this is based on
 - [Pocco81](https://github.com/Pocco81)
 - [vinnyA3](https://github.com/vinnyA3)
 - [rogeruiz](https://github.com/rogeruiz)
@@ -193,7 +170,5 @@ run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
 
 <!-- markdownlint-disable -->
 <p align="center">
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
-<p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
-<p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
+<a href="https://github.com/x140x1n/sonokai-tmux/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=e2e2e3&colorA=2c2e34&colorB=9ed072"/></a></p>
 <!-- markdownlint-enable -->

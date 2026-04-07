@@ -1,1 +1,1 @@
-@catppuccin_status_application #[fg=#eba0ac]#[fg=#11111b,bg=#eba0ac] #[fg=#cdd6f4,bg=#313244]#{E:@catppuccin_application_text}#[fg=#313244]
+@sonokai_status_application #[fg=#eba0ac]#[fg=#11111b,bg=#eba0ac] #[fg=#cdd6f4,bg=#313244]#{E:@sonokai_application_text}#[fg=#313244]
