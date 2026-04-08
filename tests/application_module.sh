@@ -8,7 +8,7 @@ source "${script_dir}/helpers.sh"
 tmux source "${script_dir}/../sonokai_options_tmux.conf"
 tmux source "${script_dir}/../sonokai_tmux.conf"
 
-print_option @sonokai_status_application | grep -q "@thm_" &&
+print_option @sonokai_status_application | grep -q "@snk_" &&
   echo "@sonokai_status_application did not expand all colors"
 
 print_option @sonokai_status_application | sed -E 's/(bash|fish|zsh)/<application>/'

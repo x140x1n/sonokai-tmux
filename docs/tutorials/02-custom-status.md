@@ -8,7 +8,7 @@ You can add arbitrary things to the status line like so:
 ```sh
 # ~/.tmux.conf
 
-set -agF status-right "#[fg=#{@thm_crust},bg=#{@thm_teal}] ##H "
+set -agF status-right "#[fg=#{@snk_black},bg=#{@snk_blue}] ##H "
 ```
 
 This will append the current hostname (`#H`) to the status line with a teal
@@ -18,8 +18,8 @@ You can also use icons for styling, for example to show the used memory percenta
 on MacOS:
 
 ```sh  
-set -g status-right "#[bg=#{@thm_flamingo},fg=#{@thm_crust}]#[reverse]#[noreverse]󱀙  "
-set -ag status-right "#[fg=#{@thm_fg},bg=#{@thm_mantle}] #(memory_pressure | awk '/percentage/{print $5}') "
+set -g status-right "#[bg=#{@snk_red},fg=#{@snk_black}]#[reverse]#[noreverse]󱀙  "
+set -ag status-right "#[fg=#{@snk_fg},bg=#{@snk_bg_dim}] #(memory_pressure | awk '/percentage/{print $5}') "
 ```
 
 ![Example of the custom ram module](../../assets/ram-example.webp)
@@ -32,7 +32,7 @@ To use the status module formatting that sonokai uses, do the following:
 %hidden MODULE_NAME="my_custom_module"
 
 set -g "@sonokai_${MODULE_NAME}_icon" " "
-set -gF "@sonokai_${MODULE_NAME}_color" "#{E:@thm_pink}"
+set -gF "@sonokai_${MODULE_NAME}_color" "#{E:@snk_purple}"
 set -g "@sonokai_${MODULE_NAME}_text" "#{pane_current_command}"
 
 source "<path to sonokai plugin>/utils/status_module.conf"

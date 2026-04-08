@@ -40,7 +40,7 @@ set -g @sonokai_[module_name]_text "text"
 ### Override the specific module's background color
 
 ```sh
-set -g @sonokai_status_[module_name]_bg_color "#{@thm_surface_0}"
+set -g @sonokai_status_[module_name]_bg_color "#{@snk_bg1}"
 ```
 
 ### Removing a specific module option
@@ -186,19 +186,19 @@ Add the following to your `~/.gitmux.conf` so that it uses sonokai colors:
 ```yaml
 tmux:
   styles:
-    clear: "#[fg=#{@thm_fg}]"
-    state: "#[fg=#{@thm_red},bold]"
-    branch: "#[fg=#{@thm_fg},bold]"
-    remote: "#[fg=#{@thm_teal}]"
-    divergence: "#[fg=#{@thm_fg}]"
-    staged: "#[fg=#{@thm_green},bold]"
-    conflict: "#[fg=#{@thm_red},bold]"
-    modified: "#[fg=#{@thm_yellow},bold]"
-    untracked: "#[fg=#{@thm_mauve},bold]"
-    stashed: "#[fg=#{@thm_blue},bold]"
-    clean: "#[fg=#{@thm_rosewater},bold]"
-    insertions: "#[fg=#{@thm_green}]"
-    deletions: "#[fg=#{@thm_red}]"
+    clear: "#[fg=#{@snk_fg}]"
+    state: "#[fg=#{@snk_red},bold]"
+    branch: "#[fg=#{@snk_fg},bold]"
+    remote: "#[fg=#{@snk_blue}]"
+    divergence: "#[fg=#{@snk_fg}]"
+    staged: "#[fg=#{@snk_green},bold]"
+    conflict: "#[fg=#{@snk_red},bold]"
+    modified: "#[fg=#{@snk_yellow},bold]"
+    untracked: "#[fg=#{@snk_purple},bold]"
+    stashed: "#[fg=#{@snk_blue},bold]"
+    clean: "#[fg=#{@snk_orange},bold]"
+    insertions: "#[fg=#{@snk_green}]"
+    deletions: "#[fg=#{@snk_red}]"
 ```
 
 ## Pomodoro module
@@ -227,8 +227,8 @@ run '~/.tmux/plugins/tpm/tpm'
 **Configure:**
 
 ```sh
-set -g @sonokai_kube_context_color "#{@thm_red}"
-set -g @sonokai_kube_namespace_color "#{@thm_sky}"
+set -g @sonokai_kube_context_color "#{@snk_red}"
+set -g @sonokai_kube_namespace_color "#{@snk_blue}"
 
 run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux
 

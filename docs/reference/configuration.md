@@ -18,7 +18,7 @@ This is a diagram of how the theme is split between its components.
 
 - `default` will use the color from the selected theme
 - `none` will make the status bar transparent
-- use hex color codes for other colors or a theme color (`#{@thm_<color>}`)
+- use hex color codes for other colors or a theme color (`#{@snk_<color>}`)
 
 ### Window
 
@@ -37,7 +37,7 @@ If you want to change the active color to something else (the default is mauve),
 use the following. For example to use lavender:
 
 ```bash
-set -g @sonokai_window_current_number_color "#{@thm_lavender}"
+set -g @sonokai_window_current_number_color "#{@snk_purple}"
 ```
 
 <details>
@@ -62,36 +62,36 @@ set -g @sonokai_window_right_separator ""
 
 ```sh
 # Use a value compatible with the standard tmux `menu-selected-style`
-set -g @sonokai_menu_selected_style "fg=#{@thm_surface_0},bg=#{@thm_yellow}"
+set -g @sonokai_menu_selected_style "fg=#{@snk_bg1},bg=#{@snk_yellow}"
 ```
 
 ### All options and their defaults
 
 ```bash
 # Menu styling options
-set -g @sonokai_menu_selected_style "fg=#{@thm_fg},bold,bg=#{@thm_overlay_0}"
+set -g @sonokai_menu_selected_style "fg=#{@snk_fg},bold,bg=#{@snk_bg4}"
 
 # Pane styling options
 set -g @sonokai_pane_status_enabled "no" # set to "yes" to enable
 set -g @sonokai_pane_border_status "off" # set to "yes" to enable
-set -g @sonokai_pane_border_style "fg=#{@thm_overlay_0}"
-set -g @sonokai_pane_active_border_style "##{?pane_in_mode,fg=#{@thm_lavender},##{?pane_synchronized,fg=#{@thm_mauve},fg=#{@thm_lavender}}}"
+set -g @sonokai_pane_border_style "fg=#{@snk_bg4}"
+set -g @sonokai_pane_active_border_style "##{?pane_in_mode,fg=#{@snk_purple},##{?pane_synchronized,fg=#{@snk_purple},fg=#{@snk_purple}}}"
 set -g @sonokai_pane_left_separator "█"
 set -g @sonokai_pane_middle_separator "█"
 set -g @sonokai_pane_right_separator "█"
-set -g @sonokai_pane_color "#{@thm_green}"
-set -g @sonokai_pane_background_color "#{@thm_surface_0}"
+set -g @sonokai_pane_color "#{@snk_green}"
+set -g @sonokai_pane_background_color "#{@snk_bg1}"
 set -g @sonokai_pane_default_text "##{b:pane_current_path}"
 set -g @sonokai_pane_default_fill "number"
 set -g @sonokai_pane_number_position "left" # right, left
 
 set -g @sonokai_window_status_style "basic" # basic, rounded, slanted, custom, or none
-set -g @sonokai_window_text_color "#{@thm_surface_0}"
-set -g @sonokai_window_number_color "#{@thm_overlay_2}"
+set -g @sonokai_window_text_color "#{@snk_bg1}"
+set -g @sonokai_window_number_color "#{@snk_grey}"
 set -g @sonokai_window_text " #T"
 set -g @sonokai_window_number "#I"
-set -g @sonokai_window_current_text_color "#{@thm_surface_1}"
-set -g @sonokai_window_current_number_color "#{@thm_mauve}"
+set -g @sonokai_window_current_text_color "#{@snk_bg2}"
+set -g @sonokai_window_current_number_color "#{@snk_purple}"
 set -g @sonokai_window_current_text " #T"
 set -g @sonokai_window_current_number "#I"
 set -g @sonokai_window_number_position "left"
@@ -112,5 +112,5 @@ set -g @sonokai_status_middle_separator ""
 set -g @sonokai_status_right_separator "█"
 set -g @sonokai_status_connect_separator "yes" # yes, no
 set -g @sonokai_status_fill "icon"
-set -g @sonokai_status_module_bg_color "#{@thm_surface_0}"
+set -g @sonokai_status_module_bg_color "#{@snk_bg1}"
 ```

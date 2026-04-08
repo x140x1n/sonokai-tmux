@@ -39,7 +39,7 @@ run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux
 
 # Make the status line more pleasant.
 set -g status-left ""
-set -g status-right '#[fg=#{@thm_crust},bg=#{@thm_teal}] session: #S '
+set -g status-right '#[fg=#{@snk_black},bg=#{@snk_blue}] session: #S '
 
 # Ensure that everything on the right side of the status line
 # is included.
@@ -59,7 +59,7 @@ in the man page, but the tl;dr is that they control what appears on the left
 and right of the status line.
 
 The `#[]` syntax is an embedded style, similar to inline css.
-`fg=#{@thm_crust}` says "make the text the crust color". `@thm_crust` is a
+`fg=#{@snk_black}` says "make the text the black color". `@snk_black` is a
 user option set by the plugin. It is created by the line
 `run ~/.config/tmux/plugins/sonokai/tmux/sonokai.tmux`, so if you try
 and use colors before that line, it won't work. The `#S` is a special sequence
